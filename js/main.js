@@ -45,25 +45,25 @@ $(window).on('load', function () {
     });
 
 
-    // PORTFOLIO ISOTOPE
-    if ($('.portfolio-items').length) {
-        var $elements = $('.portfolio-items');
-        $elements.isotope();
+    // PORTFOLIO ISOTOPE - Disabled (using tab switching instead)
+    // if ($('.portfolio-items').length) {
+    //     var $elements = $('.portfolio-items');
+    //     $elements.isotope();
 
-        $('.portfolio-filter ul li').on('click', function () {
-            $('.portfolio-filter ul li').removeClass('sel-item');
-            $(this).addClass('sel-item');
-            var selector = $(this).attr('data-filter');
-            $(".portfolio-items").isotope({
-                filter: selector,
-                animationOptions: {
-                    duration: 750,
-                    easing: 'linear',
-                    queue: false,
-                }
-            });
-        });
-    }
+    //     $('.portfolio-filter ul li').on('click', function () {
+    //         $('.portfolio-filter ul li').removeClass('sel-item');
+    //         $(this).addClass('sel-item');
+    //         var selector = $(this).attr('data-filter');
+    //         $(".portfolio-items").isotope({
+    //             filter: selector,
+    //             animationOptions: {
+    //                 duration: 750,
+    //                 easing: 'linear',
+    //                 queue: false,
+    //             }
+    //         });
+    //     });
+    // }
 });
 
 $(document).ready(function () {

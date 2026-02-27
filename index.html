@@ -91,11 +91,95 @@
         }
 
         .portfolio-items {
-            display: none;
+            display: none !important;
         }
 
         .portfolio-items.active {
+            display: flex !important;
+            flex-wrap: wrap;
+            margin: 0 -15px;
+        }
+
+        .portfolio-items .col-lg-4 {
+            flex: 0 0 33.333333%;
+            max-width: 33.333333%;
+            padding: 0 15px;
+            margin-bottom: 30px;
+        }
+
+        .popup-video {
+            position: relative;
             display: block;
+            overflow: hidden;
+        }
+
+        .popup-video img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .popup-video .video-play-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80px;
+            height: 80px;
+            z-index: 10;
+            pointer-events: none;
+        }
+
+        .popup-video .video-play-icon img {
+            width: 100%;
+            height: auto;
+        }
+
+        .popup-video:hover .video-play-icon {
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+
+        .mfp-video .mfp-content {
+            max-width: 1600px !important;
+        }
+
+        .mfp-video .mfp-iframe-scaler {
+            width: 1600px;
+            height: 900px;
+        }
+
+        .mfp-video iframe {
+            width: 1600px;
+            height: 900px;
+        }
+
+        .video-embed {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+        }
+
+        .video-embed iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        @media (max-width: 991px) {
+            .portfolio-items .col-lg-4 {
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .portfolio-items .col-lg-4 {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
         }
 
         img.mfp-img {
@@ -141,13 +225,13 @@
                         <a class="nav-link" href="#about">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#portfolio">Portfolio</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="#services">Services</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#my-skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">Portfolio</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#blog">Blog</a>
@@ -301,7 +385,8 @@
                 <!--Service items-->
                 <div class="col-lg-4 col-md-6 wow fadeInDown" data-wow-delay="0.2s">
                     <div class="services-item">
-                        <i class="fa fa-code fa-2x"></i>
+                        <img src="images/Creative Direction & Leadership.png" alt=""
+                            style="width:60px;height:60px;margin-bottom:20px;">
                         <h3>Creative Direction & Leadership</h3>
                         <p>Leading creative teams, ensuring quality design aligned with business goals.</p>
                         <a href="#" data-toggle="modal" data-target="#modal-service-1" class="ts-link-arrow-effect">
@@ -313,7 +398,8 @@
                 <!--Service items-->
                 <div class="col-lg-4 col-md-6 wow fadeInDown" data-wow-delay="0.4s">
                     <div class="services-item">
-                        <i class="fa fa-cube fa-2x"></i>
+                        <img src="images/Brand Identity Development.png" alt=""
+                            style="width:60px;height:60px;margin-bottom:20px;">
                         <h3>Brand Identity Development</h3>
                         <p>Building strong visual identities through logos, brand systems, and cohesive design language.
                         </p>
@@ -326,7 +412,8 @@
                 <!--Service items-->
                 <div class="col-lg-4 col-md-6 wow fadeInDown" data-wow-delay="0.6s">
                     <div class="services-item">
-                        <i class="fa fa-camera fa-2x"></i>
+                        <img src="images/Digital & Campaign Design.png" alt=""
+                            style="width:60px;height:60px;margin-bottom:20px;">
                         <h3>Digital & Campaign Design</h3>
                         <p>Designing performance-driven marketing creatives for digital campaigns and brand promotions.
                         </p>
@@ -339,7 +426,8 @@
                 <!--Service items-->
                 <div class="col-lg-4 col-md-6 wow fadeInDown" data-wow-delay="0.8s">
                     <div class="services-item">
-                        <i class="fa fa-mobile-phone fa-2x"></i>
+                        <img src="images/Visual & Video Supervision.png" alt=""
+                            style="width:60px;height:60px;margin-bottom:20px;">
                         <h3>Visual & Video Supervision</h3>
                         <p>Overseeing visual production, ensuring consistency across digital and video assets</p>
                         <a href="#" data-toggle="modal" data-target="#modal-service-4" class="ts-link-arrow-effect">
@@ -351,7 +439,7 @@
                 <!--Service items-->
                 <div class="col-lg-4 col-md-6 wow fadeInDown" data-wow-delay="1.0s">
                     <div class="services-item">
-                        <i class="fa fa-thumbs-up fa-2x"></i>
+                        <img src="images/Print.png" alt="" style="width:60px;height:60px;margin-bottom:20px;">
                         <h3>Print & Corporate Collateral</h3>
                         <p>Designing professional print and corporate materials aligned with brand standards.</p>
                         <a href="#" data-toggle="modal" data-target="#modal-service-5" class="ts-link-arrow-effect">
@@ -363,7 +451,8 @@
                 <!--Service items-->
                 <div class="col-lg-4 col-md-6 wow fadeInDown" data-wow-delay="1.2s">
                     <div class="services-item">
-                        <i class="fa fa-life-ring fa-2x"></i>
+                        <img src="images/Creative Strategy & Execution.png" alt=""
+                            style="width:60px;height:60px;margin-bottom:20px;">
                         <h3>Creative Strategy & Execution</h3>
                         <p>Transforming business ideas into structured visual solutions through strategic planning.</p>
                         <a href="#" data-toggle="modal" data-target="#modal-service-6" class="ts-link-arrow-effect">
@@ -482,10 +571,11 @@
                 <h2 class="text-uppercase">Portfolio</h2>
                 <div class="portfolio-filter">
                     <ul>
-                        <li class="sel-item" data-filter=".brand-identity">Brand Identity</li>
-                        <li data-filter=".campaigns">Campaigns</li>
-                        <li data-filter=".marketing-collaterals">Marketing Collaterals</li>
-                        <li data-filter=".video">Video</li>
+                        <li class="sel-item" data-filter="brand-identity">Brand Identity</li>
+                        <li data-filter="campaigns">Campaigns</li>
+                        <li data-filter="marketing-collaterals">Marketing Collaterals</li>
+                        <li data-filter="video">Video</li>
+                        <li data-filter="instagram">Instagram Feeds</li>
                     </ul>
                 </div>
             </div>
@@ -521,116 +611,161 @@
                         <img src="images/portfolio/item-6.webp" alt="">
                     </a>
                 </div>
+                <div class="col-lg-4 col-md-6 single-item brand-identity wow fadeInUp" data-wow-delay="0.8s">
+                    <a class="popup" href="images/portfolio/item-7.webp">
+                        <img src="images/portfolio/item-7.webp" alt="">
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6 single-item brand-identity wow fadeInUp" data-wow-delay="0.9s">
+                    <a class="popup" href="images/portfolio/item-8.webp">
+                        <img src="images/portfolio/item-8.webp" alt="">
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6 single-item brand-identity wow fadeInUp" data-wow-delay="1.0s">
+                    <a class="popup" href="images/portfolio/item-9.webp">
+                        <img src="images/portfolio/item-9.webp" alt="">
+                    </a>
+                </div>
             </div>
             <!--Campaigns Portfolio items-->
             <div class="row portfolio-items" id="campaigns">
                 <div class="col-lg-4 col-md-6 single-item campaigns wow fadeInUp" data-wow-delay="0.2s">
-                    <a class="popup" href="images/portfolio/item-1.webp">
-                        <img src="images/portfolio/item-1.webp" alt="">
+                    <a class="popup" href="images/portfolio/W1.webp">
+                        <img src="images/portfolio/W1.webp" alt="">
                     </a>
                 </div>
                 <div class="col-lg-4 col-md-6 single-item campaigns wow fadeInUp" data-wow-delay="0.3s">
-                    <a class="popup" href="images/portfolio/item-2.webp">
-                        <img src="images/portfolio/item-2.webp" alt="">
+                    <a class="popup" href="images/portfolio/W2.webp">
+                        <img src="images/portfolio/W2.webp" alt="">
                     </a>
                 </div>
                 <div class="col-lg-4 col-md-6 single-item campaigns wow fadeInUp" data-wow-delay="0.4s">
-                    <a class="popup" href="images/portfolio/item-3.webp">
-                        <img src="images/portfolio/item-3.webp" alt="">
+                    <a class="popup" href="images/portfolio/W3.webp">
+                        <img src="images/portfolio/W3.webp" alt="">
                     </a>
                 </div>
                 <div class="col-lg-4 col-md-6 single-item campaigns wow fadeInUp" data-wow-delay="0.5s">
-                    <a class="popup" href="images/portfolio/item-4.webp">
-                        <img src="images/portfolio/item-4.webp" alt="">
+                    <a class="popup" href="images/portfolio/W4.webp">
+                        <img src="images/portfolio/W4.webp" alt="">
                     </a>
                 </div>
                 <div class="col-lg-4 col-md-6 single-item campaigns wow fadeInUp" data-wow-delay="0.6s">
-                    <a class="popup" href="images/portfolio/item-5.webp">
-                        <img src="images/portfolio/item-5.webp" alt="">
+                    <a class="popup" href="images/portfolio/W5.webp">
+                        <img src="images/portfolio/W5.webp" alt="">
                     </a>
                 </div>
                 <div class="col-lg-4 col-md-6 single-item campaigns wow fadeInUp" data-wow-delay="0.7s">
-                    <a class="popup" href="images/portfolio/item-6.webp">
-                        <img src="images/portfolio/item-6.webp" alt="">
+                    <a class="popup" href="images/portfolio/W6.webp">
+                        <img src="images/portfolio/W6.webp" alt="">
                     </a>
                 </div>
             </div>
             <!--Marketing Collaterals Portfolio items-->
             <div class="row portfolio-items" id="marketing-collaterals">
                 <div class="col-lg-4 col-md-6 single-item marketing-collaterals wow fadeInUp" data-wow-delay="0.2s">
-                    <a class="popup" href="images/portfolio/item-1.webp">
-                        <img src="images/portfolio/item-1.webp" alt="">
+                    <a class="popup" href="images/portfolio/W7.webp">
+                        <img src="images/portfolio/W7.webp" alt="">
                     </a>
                 </div>
                 <div class="col-lg-4 col-md-6 single-item marketing-collaterals wow fadeInUp" data-wow-delay="0.3s">
-                    <a class="popup" href="images/portfolio/item-2.webp">
-                        <img src="images/portfolio/item-2.webp" alt="">
+                    <a class="popup" href="images/portfolio/W8.webp">
+                        <img src="images/portfolio/W8.webp" alt="">
                     </a>
                 </div>
                 <div class="col-lg-4 col-md-6 single-item marketing-collaterals wow fadeInUp" data-wow-delay="0.4s">
-                    <a class="popup" href="images/portfolio/item-3.webp">
-                        <img src="images/portfolio/item-3.webp" alt="">
+                    <a class="popup" href="images/portfolio/W9.webp">
+                        <img src="images/portfolio/W9.webp" alt="">
                     </a>
                 </div>
                 <div class="col-lg-4 col-md-6 single-item marketing-collaterals wow fadeInUp" data-wow-delay="0.5s">
-                    <a class="popup" href="images/portfolio/item-4.webp">
-                        <img src="images/portfolio/item-4.webp" alt="">
+                    <a class="popup" href="images/portfolio/W10.webp">
+                        <img src="images/portfolio/W10.webp" alt="">
                     </a>
                 </div>
                 <div class="col-lg-4 col-md-6 single-item marketing-collaterals wow fadeInUp" data-wow-delay="0.6s">
-                    <a class="popup" href="images/portfolio/item-5.webp">
-                        <img src="images/portfolio/item-5.webp" alt="">
+                    <a class="popup" href="images/portfolio/W11.webp">
+                        <img src="images/portfolio/W11.webp" alt="">
                     </a>
                 </div>
                 <div class="col-lg-4 col-md-6 single-item marketing-collaterals wow fadeInUp" data-wow-delay="0.7s">
-                    <a class="popup" href="images/portfolio/item-6.webp">
-                        <img src="images/portfolio/item-6.webp" alt="">
+                    <a class="popup" href="images/portfolio/W12.webp">
+                        <img src="images/portfolio/W12.webp" alt="">
                     </a>
                 </div>
             </div>
             <!--Video Portfolio items-->
             <div class="row portfolio-items" id="video">
                 <div class="col-lg-4 col-md-6 single-item video wow fadeInUp" data-wow-delay="0.2s">
-                    <div class="video-wrapper">
-                        <iframe width="100%" height="100%"
-                            src="https://www.youtube.com/embed/aCanlMwX5v0?si=2RCrCd4L-tKpdgE8" frameborder="0"
-                            allowfullscreen></iframe>
-                    </div>
+                    <a class="popup-video" href="https://www.youtube.com/embed/aCanlMwX5v0?autoplay=1">
+                        <img src="images/portfolio/item-1.webp" alt="">
+                        <div class="video-play-icon">
+                            <img src="images/youtube.png" alt="">
+                        </div>
+                    </a>
                 </div>
                 <div class="col-lg-4 col-md-6 single-item video wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="video-wrapper">
-                        <iframe width="100%" height="100%"
-                            src="https://www.youtube.com/embed/aCanlMwX5v0?si=2RCrCd4L-tKpdgE8" frameborder="0"
-                            allowfullscreen></iframe>
-                    </div>
+                    <a class="popup-video" href="https://www.youtube.com/embed/8NHv3fjc1SQ?autoplay=1">
+                        <img src="images/portfolio/item-2.webp" alt="">
+                        <div class="video-play-icon">
+                            <img src="images/youtube.png" alt="">
+                        </div>
+                    </a>
                 </div>
                 <div class="col-lg-4 col-md-6 single-item video wow fadeInUp" data-wow-delay="0.4s">
-                    <div class="video-wrapper">
-                        <iframe width="100%" height="100%"
-                            src="https://www.youtube.com/embed/aCanlMwX5v0?si=2RCrCd4L-tKpdgE8" frameborder="0"
-                            allowfullscreen></iframe>
-                    </div>
+                    <a class="popup-video" href="https://www.youtube.com/embed/GvNrrFAZP8w?autoplay=1">
+                        <img src="images/portfolio/item-3.webp" alt="">
+                        <div class="video-play-icon">
+                            <img src="images/youtube.png" alt="">
+                        </div>
+                    </a>
                 </div>
                 <div class="col-lg-4 col-md-6 single-item video wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="video-wrapper">
-                        <iframe width="100%" height="100%"
-                            src="https://www.youtube.com/embed/aCanlMwX5v0?si=2RCrCd4L-tKpdgE8" frameborder="0"
-                            allowfullscreen></iframe>
-                    </div>
+                    <a class="popup-video" href="https://www.youtube.com/embed/PGzIDoc6gJk?autoplay=1">
+                        <img src="images/portfolio/item-4.webp" alt="">
+                        <div class="video-play-icon">
+                            <img src="images/youtube.png" alt="">
+                        </div>
+                    </a>
                 </div>
                 <div class="col-lg-4 col-md-6 single-item video wow fadeInUp" data-wow-delay="0.6s">
-                    <div class="video-wrapper">
-                        <iframe width="100%" height="100%"
-                            src="https://www.youtube.com/embed/aCanlMwX5v0?si=2RCrCd4L-tKpdgE8" frameborder="0"
-                            allowfullscreen></iframe>
-                    </div>
+                    <a class="popup-video" href="https://www.youtube.com/embed/ap_-qx6fPB4?autoplay=1">
+                        <img src="images/portfolio/item-5.webp" alt="">
+                        <div class="video-play-icon">
+                            <img src="images/youtube.png" alt="">
+                        </div>
+                    </a>
                 </div>
                 <div class="col-lg-4 col-md-6 single-item video wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="video-wrapper">
-                        <iframe width="100%" height="100%"
-                            src="https://www.youtube.com/embed/aCanlMwX5v0?si=2RCrCd4L-tKpdgE8" frameborder="0"
-                            allowfullscreen></iframe>
-                    </div>
+                    <a class="popup-video" href="https://www.youtube.com/embed/aZsC4UWYvaA?autoplay=1">
+                        <img src="images/portfolio/item-6.webp" alt="">
+                        <div class="video-play-icon">
+                            <img src="images/youtube.png" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6 single-item video wow fadeInUp" data-wow-delay="0.8s">
+                    <a class="popup-video" href="https://www.youtube.com/embed/XLffbySW6jo?autoplay=1">
+                        <img src="images/portfolio/item-1.webp" alt="">
+                        <div class="video-play-icon">
+                            <img src="images/youtube.png" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6 single-item video wow fadeInUp" data-wow-delay="0.9s">
+                    <a class="popup-video" href="https://www.youtube.com/embed/sL9VHyF1KQk?autoplay=1">
+                        <img src="images/portfolio/item-2.webp" alt="">
+                        <div class="video-play-icon">
+                            <img src="images/youtube.png" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6 single-item video wow fadeInUp" data-wow-delay="1.0s">
+                    <a class="popup-video" href="https://www.youtube.com/embed/lwD6Qbb9BBY?autoplay=1">
+                        <img src="images/portfolio/item-3.webp" alt="">
+                        <div class="video-play-icon">
+                            <img src="images/youtube.png" alt="">
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -642,12 +777,13 @@
     </section>
     <!--Portfolio Section End-->
 
+    <!--Blog Section Start-->
     <section id="blog" class="wave-primary">
         <div class="container">
             <h2 class="text-uppercase padbtm-40 text-center">Insights & Perspectives</h2>
             <div class="row">
                 <!--blog item-->
-                <a class="blog-post col-lg-4 col-md-6 wow fadeInLeft" data-wow-delay="0.3s" href="single-blog.html">
+                <a class="blog-post col-lg-4 col-md-6 wow fadeInLeft" data-wow-delay="0.3s" href="first-blog.html">
                     <div class="post-image">
                         <img src="images/blog/img-1.jpg" alt="">
                     </div>
@@ -658,29 +794,26 @@
                 </a>
 
                 <!--blog item-->
-                <a class="blog-post col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s" href="single-blog.html">
+                <a class="blog-post col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s" href="second-blog.html">
                     <div class="post-image">
                         <img src="images/blog/img-2.jpg" alt="">
                     </div>
-                    <h3 class="post-title">Blog Heading</h3>
-                    <p class="post-body">Lorem sit mollitia deserunt ea at. Laudantium nostrum asperiores nulla tempora
-                        modi eveniet est Consequuntur repellat totam itaque earum optio hic nulla quia.</p>
+                    <h3 class="post-title">Leading Creative Teams for Performance & Impact</h3>
+                    <p class="post-body">Creative leadership is about guiding people, not just approving designs.</p>
                     <div class="post-meta"><span>John Doe </span>- 1 July 2018</div>
                 </a>
 
                 <!--blog item-->
-                <a class="blog-post col-lg-4 col-md-6 wow fadeInRight" data-wow-delay="0.3s" href="single-blog.html">
+                <a class="blog-post col-lg-4 col-md-6 wow fadeInRight" data-wow-delay="0.3s" href="third-blog.html">
                     <div class="post-image">
                         <img src="images/blog/img-3.jpg" alt="">
                     </div>
-                    <h3 class="post-title">Blog Heading</h3>
-                    <p class="post-body">Lorem sit mollitia deserunt ea at. Laudantium nostrum asperiores nulla tempora
-                        modi eveniet est Consequuntur repellat totam itaque earum optio hic nulla quia.</p>
+                    <h3 class="post-title"> From Concept to Campaign: A Structured Approach</h3>
+                    <p class="post-body">Every successful campaign starts with a clear purpose.</p>
                     <div class="post-meta"><span>Jeff Doe </span>- 2 September 2018</div>
                 </a>
 
             </div>
-            <div class="view-more-button"><a class="main-button" href="blog.html">View More</a></div>
 
         </div>
         <!--Creative Background Wave-->
@@ -721,6 +854,39 @@
                         <div class="contact-item">
                             <h4>Phone</h4>
                             <p>+91-9494388970</p>
+                        </div>
+                    </div>
+                    <!--Instagram Feeds Portfolio items-->
+                    <div class="row portfolio-items" id="instagram">
+                        <div class="col-lg-4 col-md-6 single-item instagram wow fadeInUp" data-wow-delay="0.2s">
+                            <a class="popup" href="images/portfolio/item-1.webp">
+                                <img src="images/portfolio/item-1.webp" alt="">
+                            </a>
+                        </div>
+                        <div class="col-lg-4 col-md-6 single-item instagram wow fadeInUp" data-wow-delay="0.3s">
+                            <a class="popup" href="images/portfolio/item-2.webp">
+                                <img src="images/portfolio/item-2.webp" alt="">
+                            </a>
+                        </div>
+                        <div class="col-lg-4 col-md-6 single-item instagram wow fadeInUp" data-wow-delay="0.4s">
+                            <a class="popup" href="images/portfolio/item-3.webp">
+                                <img src="images/portfolio/item-3.webp" alt="">
+                            </a>
+                        </div>
+                        <div class="col-lg-4 col-md-6 single-item instagram wow fadeInUp" data-wow-delay="0.5s">
+                            <a class="popup" href="images/portfolio/item-4.webp">
+                                <img src="images/portfolio/item-4.webp" alt="">
+                            </a>
+                        </div>
+                        <div class="col-lg-4 col-md-6 single-item instagram wow fadeInUp" data-wow-delay="0.6s">
+                            <a class="popup" href="images/portfolio/item-5.webp">
+                                <img src="images/portfolio/item-5.webp" alt="">
+                            </a>
+                        </div>
+                        <div class="col-lg-4 col-md-6 single-item instagram wow fadeInUp" data-wow-delay="0.7s">
+                            <a class="popup" href="images/portfolio/item-6.webp">
+                                <img src="images/portfolio/item-6.webp" alt="">
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -818,23 +984,6 @@
     </footer>
     <!--Footer Section End-->
 
-    <script>
-        $(document).ready(function () {
-            $('.portfolio-filter ul li').on('click', function () {
-                $('.portfolio-filter ul li').removeClass('sel-item');
-                $(this).addClass('sel-item');
-
-                var filter = $(this).data('filter');
-
-                $('.portfolio-items').removeClass('active');
-                $('#' + filter.replace('.', '')).addClass('active');
-            });
-
-            $('.portfolio-filter ul li:first-child').addClass('sel-item');
-            $('.portfolio-items:first-of-type').addClass('active');
-        });
-    </script>
-
     <!--JQuery js-->
     <script src="js/jquery.min.js"></script>
     <!--Bootstrap js-->
@@ -852,6 +1001,61 @@
     <!--Site main js-->
     <script src="js/isInViewport.jquery.js"></script>
     <script src="js/main.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('.portfolio-filter ul li').on('click', function () {
+                $('.portfolio-filter ul li').removeClass('sel-item');
+                $(this).addClass('sel-item');
+
+                var filter = $(this).data('filter');
+
+                $('.portfolio-items').removeClass('active');
+                $('#' + filter).addClass('active');
+
+                $('#' + filter).find('.col-lg-4').each(function (index) {
+                    $(this).css('animation-delay', (index * 0.1) + 's');
+                });
+
+                $('html, body').animate({
+                    scrollTop: $('#portfolio').offset().top - 100
+                }, 500);
+            });
+
+            $('.portfolio-filter ul li:first-child').addClass('sel-item');
+            $('.portfolio-items:first-of-type').addClass('active');
+            $('.portfolio-items:first-of-type').find('.col-lg-4').each(function (index) {
+                $(this).css('animation-delay', (index * 0.1) + 's');
+            });
+
+            // Video popup
+            $('.popup-video').magnificPopup({
+                type: 'iframe',
+                iframe: {
+                    patterns: {
+                        youtube: {
+                            index: 'youtube.com/embed/',
+                            id: null,
+                            src: '%id%?autoplay=1'
+                        }
+                    },
+                    srcAction: 'iframe_src'
+                },
+                zoom: { enabled: true, duration: 300 },
+                mainClass: 'mfp-video',
+                removalDelay: 300
+            });
+
+            // Video popup custom size
+            $(document).on('mfpOpen', '.mfp-video', function () {
+                $('.mfp-content').css('max-width', '1600px');
+                $('.mfp-iframe-scaler').css({
+                    'width': '1600px',
+                    'height': '900px'
+                });
+            });
+        });
+    </script>
 
     <script src="js/owl.carousel.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.8/odometer.min.js"></script>
@@ -923,25 +1127,12 @@
         <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
             <div class="modal-content border-0 rounded-0">
 
-                <!-- MODAL HEADER -->
-                <div class="modal-header bg-light px-5 pt-0 pb-5">
-                    <div class="ts-title mb-0">
-                        <figure class="ts-circle__md bg-dark rounded-0">
-                            <img src="images/service-creative.webp" alt="">
-                        </figure>
-                        <h4 class="mb-0">Creative</h4>
-                    </div>
-
-                    <button type="button" class="close position-absolute ts-top__0 ts-right__0 m-2"
-                        data-dismiss="modal">
-                        <span class="text-white">&times;</span>
-                    </button>
-                </div>
-
                 <!-- MODAL BODY -->
-                <div class="modal-body p-5">
-                    <h5 class="mb-4">Latest Works</h5>
-
+                <div class="modal-body p-5" style="position:relative;">
+                    <button type="button" class="close position-absolute"
+                        style="top:10px;right:15px;font-size:30px;z-index:1000;" data-dismiss="modal">
+                        <span>&times;</span>
+                    </button>
                     <div class="owl-carousel service-carousel">
 
                         <!-- SLIDE 1 -->
@@ -984,24 +1175,12 @@
         <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
             <div class="modal-content border-0 rounded-0">
 
-                <!-- HEADER -->
-                <div class="modal-header bg-light px-5 pt-0 pb-5">
-                    <div class="ts-title mb-0">
-                        <figure class="ts-circle__md bg-dark rounded-0">
-                            <i class="fa fa-cube fa-2x text-white" style="line-height:100px;"></i>
-                        </figure>
-                        <h4 class="mb-0">Brand Identity</h4>
-                    </div>
-
+                <!-- BODY -->
+                <div class="modal-body p-5" style="position:relative;">
                     <button type="button" class="close position-absolute ts-top__0 ts-right__0 m-2"
                         data-dismiss="modal">
-                        <span class="text-white">&times;</span>
+                        <span class="text-dark">&times;</span>
                     </button>
-                </div>
-
-                <!-- BODY -->
-                <div class="modal-body p-5">
-                    <h5 class="mb-4">Latest Works</h5>
 
                     <div class="owl-carousel service-carousel">
                         <div class="slide">
@@ -1039,22 +1218,11 @@
         <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
             <div class="modal-content border-0 rounded-0">
 
-                <div class="modal-header bg-light px-5 pt-0 pb-5">
-                    <div class="ts-title mb-0">
-                        <figure class="ts-circle__md bg-dark rounded-0">
-                            <i class="fa fa-camera fa-2x text-white" style="line-height:100px;"></i>
-                        </figure>
-                        <h4 class="mb-0">Digital Design</h4>
-                    </div>
-
+                <div class="modal-body p-5" style="position:relative;">
                     <button type="button" class="close position-absolute ts-top__0 ts-right__0 m-2"
                         data-dismiss="modal">
-                        <span class="text-white">&times;</span>
+                        <span class="text-dark">&times;</span>
                     </button>
-                </div>
-
-                <div class="modal-body p-5">
-                    <h5 class="mb-4">Latest Works</h5>
 
                     <div class="owl-carousel service-carousel">
                         <div class="slide">
@@ -1091,22 +1259,11 @@
         <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
             <div class="modal-content border-0 rounded-0">
 
-                <div class="modal-header bg-light px-5 pt-0 pb-5">
-                    <div class="ts-title mb-0">
-                        <figure class="ts-circle__md bg-dark rounded-0">
-                            <i class="fa fa-mobile-phone fa-2x text-white" style="line-height:100px;"></i>
-                        </figure>
-                        <h4 class="mb-0">Visual & Video</h4>
-                    </div>
-
+                <div class="modal-body p-5" style="position:relative;">
                     <button type="button" class="close position-absolute ts-top__0 ts-right__0 m-2"
                         data-dismiss="modal">
-                        <span class="text-white">&times;</span>
+                        <span class="text-dark">&times;</span>
                     </button>
-                </div>
-
-                <div class="modal-body p-5">
-                    <h5 class="mb-4">Latest Works</h5>
 
                     <div class="owl-carousel service-carousel">
                         <div class="slide">
@@ -1144,22 +1301,11 @@
         <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
             <div class="modal-content border-0 rounded-0">
 
-                <div class="modal-header bg-light px-5 pt-0 pb-5">
-                    <div class="ts-title mb-0">
-                        <figure class="ts-circle__md bg-dark rounded-0">
-                            <i class="fa fa-thumbs-up fa-2x text-white" style="line-height:100px;"></i>
-                        </figure>
-                        <h4 class="mb-0">Corporate Collateral</h4>
-                    </div>
-
+                <div class="modal-body p-5" style="position:relative;">
                     <button type="button" class="close position-absolute ts-top__0 ts-right__0 m-2"
                         data-dismiss="modal">
-                        <span class="text-white">&times;</span>
+                        <span class="text-dark">&times;</span>
                     </button>
-                </div>
-
-                <div class="modal-body p-5">
-                    <h5 class="mb-4">Latest Works</h5>
 
                     <div class="owl-carousel service-carousel">
                         <div class="slide">
@@ -1196,22 +1342,11 @@
         <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
             <div class="modal-content border-0 rounded-0">
 
-                <div class="modal-header bg-light px-5 pt-0 pb-5">
-                    <div class="ts-title mb-0">
-                        <figure class="ts-circle__md bg-dark rounded-0">
-                            <i class="fa fa-life-ring fa-2x text-white" style="line-height:100px;"></i>
-                        </figure>
-                        <h4 class="mb-0">Strategy & Execution</h4>
-                    </div>
-
+                <div class="modal-body p-5" style="position:relative;">
                     <button type="button" class="close position-absolute ts-top__0 ts-right__0 m-2"
                         data-dismiss="modal">
-                        <span class="text-white">&times;</span>
+                        <span class="text-dark">&times;</span>
                     </button>
-                </div>
-
-                <div class="modal-body p-5">
-                    <h5 class="mb-4">Latest Works</h5>
 
                     <div class="owl-carousel service-carousel">
                         <div class="slide">
