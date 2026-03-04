@@ -30,10 +30,10 @@ export default async function handler(req, res) {
       `
     });
 
-    return res.status(200).json({ message: "Email sent successfully" });
+    return res.status(200).json({ success: true });
 
   } catch (error) {
-    return res.status(500).json({ message: "Email failed", error });
+    return res.status(500).json({ success: false });
   }
 
 }
