@@ -1,9 +1,15 @@
 {
   "version": 2,
-  "rewrites": [
+  "builds": [
     {
-      "source": "/api/sendMail",
-      "destination": "/api/sendMail.js"
+      "src": "api/sendMail.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/sendMail",
+      "dest": "/api/sendMail.js"
     }
   ]
 }

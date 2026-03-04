@@ -1,9 +1,9 @@
 /************* Main Javasript ************************
 
-    Template Name: Adrian - Personal Portfolio Template
-    Author: cosmos-themes
+    Template Name: SreeHarsha Raju - Personal Portfolio Template
+    Author: SreeHarsha Raju
     Version: 2.0
-    Copyright 2018
+    Copyright 2026
 
 ****************************************/
 

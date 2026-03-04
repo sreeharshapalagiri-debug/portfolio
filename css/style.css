@@ -1,8 +1,8 @@
 /************* CSS Styles ************************
-    Template Name: Adrian - Personal Portfolio Template
-    Author: cosmos-themes
+    Template Name: SreeHarsha Raju - Personal Portfolio Template
+    Author: SreeHarsha Raju
     Version: 2.0
-    Copyright 2018
+    Copyright 2026
 ****************************************/
 
 
@@ -700,7 +700,7 @@ section {
 #blog {
     background-color: #ffffff;
     padding-top: 120px;
-    padding-bottom: 160px;
+    padding-bottom: 0px;
 }
 
 .blog-post {
@@ -1274,4 +1274,100 @@ footer p {
     left: 0;
     right: 0;
     z-index: 10;
+}
+
+/* MODAL WIDTH */
+.custom-modal-width {
+    max-width: 950px;
+}
+
+/* MODAL BACKGROUND */
+.custom-modal {
+    background: #f3f3f3;
+    border-radius: 0;
+    border: none;
+}
+
+/* BODY SPACING */
+.custom-body {
+    padding: 45px 50px;
+    position: relative;
+}
+
+/* CLOSE BUTTON */
+.custom-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 26px;
+    color: #bbb;
+    background: none;
+    border: none;
+    z-index: 10;
+}
+
+/* IMAGE STYLE */
+.custom-img {
+    border-radius: 12px;
+    width: 100%;
+    height: auto;
+}
+
+/* ICON BOX */
+.icon-box {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-box img {
+    width: 45px;
+    height: auto;
+}
+
+.icon-box i {
+    color: #ff5e3a;
+    font-size: 22px;
+}
+
+/* TITLE */
+.modal-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+/* DESCRIPTION */
+.modal-desc {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+/* DIVIDER */
+hr {
+    border-top: 1px solid #ddd;
+    margin: 15px 0;
+}
+
+/* SERVICES TITLE */
+.services-title {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* SERVICES LIST */
+.services-list {
+    list-style: none;
+    padding: 0;
+    color: #777;
+}
+
+.services-list li {
+    margin-bottom: 6px;
+    font-size: 14px;
 }
