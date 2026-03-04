@@ -8,7 +8,7 @@
   ],
   "routes": [
     {
-      "src": "/api/sendMail",
+      "src": "^/api/sendMail$",
       "dest": "/api/sendMail.js"
     },
     {
